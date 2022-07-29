@@ -64,9 +64,24 @@ User Interface
 - [x] Add placeholders into the numeric input fields
 
 Click handlers
-- [] Create click handler for `=` in readyNow function
-- [] `=` click handler bundles both inputs and math operation as an object.
-- [] 
+- [x] Create click handler for `=` in readyNow function
+- [x] `=` click handler sends data to function sendMathToServer
+
+Server.js data
+- [x] Create const empty array in server.js
+
+Post route
+- [] Create function to sendMathToServer
+- [] Use ajax to bundle data in an object
+- [] Use type: 'POST'
+- [] Use url: '/math'
+- [] Use data: {
+    $('#first-input').val()
+    $('#second-input').val()
+    `capture math operation` Try using $(this)
+    }
+
+
 
 
 
