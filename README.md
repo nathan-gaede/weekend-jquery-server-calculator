@@ -35,10 +35,10 @@ Create a user interface where the user can input two values (2 input elements) a
 │   └── ...
 └── .gitignore
 
-- [] Create html head and body
-- [] Download jQuery and paste into jquery.js
-- [] Source scripts, vendors and styles into index.html
-- [] Console.log test client.js
+- [x] Create html head and body
+- [x] Download jQuery and paste into jquery.js
+- [x] Source scripts, vendors and styles into index.html
+- [x] Console.log test client.js
 - [] Check gitignore file for completeness 
 - [] Since server is needed and no json file is present use "npm init --yes"
 - [] Download express with "npm install"
