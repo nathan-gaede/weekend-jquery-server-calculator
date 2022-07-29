@@ -39,12 +39,13 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Download jQuery and paste into jquery.js
 - [x] Source scripts, vendors and styles into index.html
 - [x] Console.log test client.js
-- [] Check gitignore file for completeness 
+- [x] Check gitignore file for completeness(does not include *.log) Moving past this and will re-visit if problematic.
+- [x] Create readyNow function in client.js
+- [x] Console.log to test readyNow function
 - [] Since server is needed and no json file is present use "npm init --yes"
 - [] Download express with "npm install"
 - [] In package.json, source scripts into "start:"
-- [] Create readyNow function in jquery.js
-- [] Console.log to test readyNow function
+
 - []
 
 
