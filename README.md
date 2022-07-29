@@ -42,11 +42,14 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Check gitignore file for completeness(does not include *.log) Moving past this and will re-visit if problematic.
 - [x] Create readyNow function in client.js
 - [x] Console.log to test readyNow function
-- [] Since server is needed and no json file is present use "npm init --yes"
-- [] Download express with "npm install"
-- [] In package.json, source scripts into "start:"
-
-- []
+- [x] Since server is needed and no json file is present use "npm init --yes"
+- [x] Download express with "npm install"
+- [x] In package.json, in scripts, under "test:", source "start": "node server/server.js"
+- [x] in package.json, add "start": "node server/server.js" under "scripts"
+- [x] In server.js, create code to require express
+- [x] In server.js, specify PORT
+- [x] In server.js, create app.use 
+- [x] In server.js, create app.listen
 
 
 
