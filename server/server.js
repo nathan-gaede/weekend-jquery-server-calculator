@@ -1,3 +1,6 @@
+//Bring express into project
+//npm init --yes and npm install express first.
+
 const express = require('express');
 
 const app = express();

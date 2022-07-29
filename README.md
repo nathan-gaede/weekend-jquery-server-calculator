@@ -44,12 +44,32 @@ Create a user interface where the user can input two values (2 input elements) a
 - [x] Console.log to test readyNow function
 - [x] Since server is needed and no json file is present use "npm init --yes"
 - [x] Download express with "npm install"
-- [x] In package.json, in scripts, under "test:", source "start": "node server/server.js"
+- [x] In package.json, in scripts, under "test:", source, "main": "node server/server.js"
 - [x] in package.json, add "start": "node server/server.js" under "scripts"
 - [x] In server.js, create code to require express
 - [x] In server.js, specify PORT
 - [x] In server.js, create app.use 
 - [x] In server.js, create app.listen
+
+User Interface
+- [x] Create input field for first number value
+- [x] Create addition button
+- [x] Create subtract button
+- [x] Create multiply button
+- [x] Create division button
+- [x] Create input field for second number value
+- [x] Create "equals" button
+- [x] Create "clear" button
+- [x] Add instruction to html page to enter both numeric values before clicking the desired operation. 
+- [x] Add placeholders into the numeric input fields
+
+Click handlers
+- [] Create click handler for `=` in readyNow function
+- [] `=` click handler bundles both inputs and math operation as an object.
+- [] 
+
+
+
 
 
 
