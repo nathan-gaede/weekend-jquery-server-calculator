@@ -69,13 +69,20 @@ Click handlers
 
 Server.js data
 - [x] Create const empty array in server.js
+- [x] Add object properties to empty array
+- [x] Add app.use(express.urlencoded()); above any app.post code
+- [x] Add app.post ('/math', (req, res) => {
+    `set const as equal to req.body`;
+    push new const into existing server array
+    res.sendStatus(201) `send back success`
+})
 
 Post route
-- [] Create function to sendMathToServer
-- [] Use ajax to bundle data in an object
-- [] Use type: 'POST'
-- [] Use url: '/math'
-- [] Use data: {
+- [x] Create function to sendMathToServer
+- [x] Use ajax to bundle data in an object
+- [x] Use type: 'POST'
+- [x] Use url: '/math'
+- [x] Use data: {
     $('#first-input').val()
     $('#second-input').val()
     `capture math operation` Try using $(this)
