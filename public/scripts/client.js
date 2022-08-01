@@ -4,7 +4,49 @@ $(document).ready(readyNow)
 
 function readyNow() {
     console.log('readyNow');
-    $('#calculate').on('click', sendMathToServer);
+    $('#add-number').on('click', addButton);
+    $('#subtract-number').on('click', minusButton);
+    $('#multiply-number').on('click', multiplyButton);
+    $('#divide-number').on('click', divideButton);
+    $('#calculate').on('click', packageObject);
+}
+
+let inputData = {};
+let selectedOperator = {};
+
+function packageObject() {
+    inputData.first = $('#first-input').val();
+    inputData.second = $('#second-input').val();
+    console.log('in packageObject');
+    console.log(inputData);
+    $.extend(inputData, selectedOperator);
+    sendMathToServer();
+}
+
+function addButton() {
+    //console.log('in addButton');
+    selectedOperator.operator = '+';
+    //console.log(selectedOperator);
+    
+}
+
+function minusButton() {
+    //console.log('in minusButton');
+    selectedOperator.operator = '-';
+    //console.log(selectedOperator);
+}
+
+function multiplyButton() {
+    //console.log('in multiplyButton');
+    selectedOperator.operator = '*';
+    //console.log(selectedOperator);
+
+}
+
+function divideButton() {
+    //console.log('in divideButton');
+    selectedOperator.operator = '/';
+    //console.log(selectedOperator);
 }
 
 function sendMathToServer() {
@@ -12,15 +54,12 @@ function sendMathToServer() {
     $.ajax({
         type: 'POST',
         url: '/math',
-        data: {
-            first: $('#first-input').val(),
-            second: $('#second-input').val()
-            
+        data: inputData
 
-            }
         }).then(function(response){
             console.log('success');
         })
 }
+
 
 

@@ -87,6 +87,17 @@ Post route
     $('#second-input').val()
     `capture math operation` Try using $(this)
     }
+- [x] Add addition operation on click `+` to the bundled object
+- [x] Add subtraction operation on click `-` to the bundled object
+- [x] Add multiplication operation on click `*` to the bundled object
+- [x] Add division operation on click `/` to the bundled object
+- [] 
+- [] Add <div> to html to group buttons
+- [] Give the button <div> a class to reference
+- [x] Test ajax POST request for button select accuracy
+
+
+
 
 
 
