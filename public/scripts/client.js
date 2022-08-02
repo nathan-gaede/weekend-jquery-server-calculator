@@ -71,7 +71,7 @@ function getResultsFromServer () {
 
     }).then(function(response){
         //console.log('retrieved');
-        console.log('display full operation', response);
+        console.log('display returned object', response);
     })
 
 }

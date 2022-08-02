@@ -34,17 +34,36 @@ function calculateInputs() {
     
     let firstNumber = Number(mathInputs.first);
     let secondNumber = Number(mathInputs.second);
+    let chosenOperator = (mathInputs.operator);
     if (mathInputs.operator === '+') {
         
         returnBundle.firstNumber = firstNumber;
+        returnBundle.operator = chosenOperator;
         returnBundle.secondNumber = secondNumber;
         returnBundle.result = firstNumber + secondNumber;
-        //returnBundle.push(returnBundle.firstNumber, + returnBundle.secondNumber, returnBundle.result);
-        console.log(returnBundle);
-    }
-    
-    
+        
+        }
+    else if (mathInputs.operator === '-') {
+        returnBundle.firstNumber = firstNumber;
+        returnBundle.operator = chosenOperator;
+        returnBundle.secondNumber = secondNumber;
+        returnBundle.result = firstNumber - secondNumber;
+        }
+    else if (mathInputs.operator === '*') {
+        returnBundle.firstNumber = firstNumber;
+        returnBundle.operator = chosenOperator;
+        returnBundle.secondNumber = secondNumber;
+        returnBundle.result = firstNumber * secondNumber;
+        }
+    else if (mathInputs.operator === '/') {
+        returnBundle.firstNumber = firstNumber;
+        returnBundle.operator = chosenOperator;
+        returnBundle.secondNumber = secondNumber;
+        returnBundle.result = firstNumber / secondNumber;
+        }
+    console.log(returnBundle);    
 }
+
 
 
 
