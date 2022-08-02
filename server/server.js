@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 5002;
 
 let mathInputs = {};
-const returnBundle = [];
+const returnBundle = {};
 
 app.use(express.static('public'));
 app.use(express.urlencoded());
@@ -25,26 +25,25 @@ app.post('/math', (req, res) => {
 });
 
 app.get('/retrieve', (req, res) => {
-    res.send(mathInputs);
     calculateInputs();
+    res.send(returnBundle);
     
 });
 
 function calculateInputs() {
-    // console.log('in calculateInputs');
-    // console.log(mathInputs.first);
-    // console.log(mathInputs.second);
-    // console.log(mathInputs.operator);
+    
     let firstNumber = Number(mathInputs.first);
     let secondNumber = Number(mathInputs.second);
     if (mathInputs.operator === '+') {
-       returnBundle.push((firstNumber) + (secondNumber));
+        
+        returnBundle.firstNumber = firstNumber;
+        returnBundle.secondNumber = secondNumber;
+        returnBundle.result = firstNumber + secondNumber;
+        //returnBundle.push(returnBundle.firstNumber, + returnBundle.secondNumber, returnBundle.result);
+        console.log(returnBundle);
     }
-    console.log(firstNumber);
-    console.log(secondNumber);
-    console.log(returnBundle);
-
-
+    
+    
 }
 
 

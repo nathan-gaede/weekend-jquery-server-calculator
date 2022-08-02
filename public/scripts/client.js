@@ -17,7 +17,7 @@ let selectedOperator = {};
 function packageObject() {
     inputData.first = $('#first-input').val();
     inputData.second = $('#second-input').val();
-    console.log('in packageObject');
+    //console.log('in packageObject');
     console.log(inputData);
     $.extend(inputData, selectedOperator);
     sendMathToServer();
@@ -52,7 +52,7 @@ function divideButton() {
 }
 
 function sendMathToServer() {
-    console.log('in sendMathToServer');
+    //console.log('in sendMathToServer');
     $.ajax({
         type: 'POST',
         url: '/math',
@@ -64,13 +64,14 @@ function sendMathToServer() {
 }
 
 function getResultsFromServer () {
-    console.log('in getResultsFromServer');
+    //console.log('in getResultsFromServer');
     $.ajax({
         type: 'GET',
         url: '/retrieve',
 
     }).then(function(response){
-        console.log('retrieved');
+        //console.log('retrieved');
+        console.log('display full operation', response);
     })
 
 }
