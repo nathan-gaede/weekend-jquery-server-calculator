@@ -72,9 +72,22 @@ function getResultsFromServer () {
     }).then(function(response){
         //console.log('retrieved');
         console.log('display returned object', response);
+        $('#result-container').append(`
+            <tr>
+                <td>${response.firstNumber}</td>
+                <td>${response.operator}</td>
+                <td>${response.secondNumber}</td>
+                <td>${response.result}</td>
+            </tr>
+        `);
+        $('input').val('');
+        //console.log(response.firstNumber);
     })
 
 }
+
+
+
 
 
 
