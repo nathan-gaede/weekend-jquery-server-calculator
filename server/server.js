@@ -7,23 +7,47 @@ const app = express();
 
 const port = process.env.PORT || 5002;
 
-const mathInputs = [];
+let mathInputs = {};
+const returnBundle = [];
 
 app.use(express.static('public'));
 app.use(express.urlencoded());
 
-app.get('/math', (req, res) => {
-    res.send(mathInputs);
-});
+
 
 app.post('/math', (req, res) => {
     //const = result = req.body;
     console.log(req.body);
-    const result = req.body;
-    mathInputs.push(result);
+    mathInputs = req.body;
+    //mathInputs.push(mathInputs);
     res.sendStatus(201);
 
 });
+
+app.get('/retrieve', (req, res) => {
+    res.send(mathInputs);
+    calculateInputs();
+    
+});
+
+function calculateInputs() {
+    // console.log('in calculateInputs');
+    // console.log(mathInputs.first);
+    // console.log(mathInputs.second);
+    // console.log(mathInputs.operator);
+    let firstNumber = Number(mathInputs.first);
+    let secondNumber = Number(mathInputs.second);
+    if (mathInputs.operator === '+') {
+       returnBundle.push((firstNumber) + (secondNumber));
+    }
+    console.log(firstNumber);
+    console.log(secondNumber);
+    console.log(returnBundle);
+
+
+}
+
+
 
 app.listen(port, () => {
     console.log('Listening on port', port);

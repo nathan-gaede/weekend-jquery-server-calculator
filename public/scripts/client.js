@@ -21,6 +21,8 @@ function packageObject() {
     console.log(inputData);
     $.extend(inputData, selectedOperator);
     sendMathToServer();
+    getResultsFromServer();
+
 }
 
 function addButton() {
@@ -57,8 +59,20 @@ function sendMathToServer() {
         data: inputData
 
         }).then(function(response){
-            console.log('success');
+            //console.log('success');
         })
+}
+
+function getResultsFromServer () {
+    console.log('in getResultsFromServer');
+    $.ajax({
+        type: 'GET',
+        url: '/retrieve',
+
+    }).then(function(response){
+        console.log('retrieved');
+    })
+
 }
 
 
