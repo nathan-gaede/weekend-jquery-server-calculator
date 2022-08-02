@@ -91,10 +91,26 @@ Post route
 - [x] Add subtraction operation on click `-` to the bundled object
 - [x] Add multiplication operation on click `*` to the bundled object
 - [x] Add division operation on click `/` to the bundled object
-- [] 
+
 - [] Add <div> to html to group buttons
 - [] Give the button <div> a class to reference
 - [x] Test ajax POST request for button select accuracy
+
+Get route
+- [x] Create GET route using type: 'GET' and url '/retrieve'
+- [x] Add variable in server to house inputs object
+- [x] Add variable in server to house results object
+- [x] Create variables to contain input values and operation selection
+- [x] Create server function to perform calculations
+- [x] Within function, append object properties during calculation
+- [x] Test object variable retrieval in client.js
+
+Append to the DOM
+- [x] Create html table with a <tr> and 4 <th>, first number, operation, second number, result.
+- [x] Give table an id
+- [x] Within getResultsFromServer, append <td> to the DOM using the properties of variable `response`
+- [x] Add command to clear input fields upon clicking the equals button
+
 
 
 
