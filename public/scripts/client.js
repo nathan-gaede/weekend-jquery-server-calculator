@@ -9,19 +9,23 @@ function readyNow() {
     $('#multiply-number').on('click', multiplyButton);
     $('#divide-number').on('click', divideButton);
     $('#calculate').on('click', packageObject);
+    calcHistory();
 }
 
 let inputData = {};
 let selectedOperator = {};
+const resultHistory = [];
 
 function packageObject() {
     inputData.first = $('#first-input').val();
     inputData.second = $('#second-input').val();
     //console.log('in packageObject');
-    console.log(inputData);
+    //console.log(inputData);
     $.extend(inputData, selectedOperator);
     sendMathToServer();
     getResultsFromServer();
+
+    
 
 }
 
@@ -53,6 +57,7 @@ function divideButton() {
 
 function sendMathToServer() {
     //console.log('in sendMathToServer');
+    //post can do the calculation
     $.ajax({
         type: 'POST',
         url: '/math',
@@ -63,7 +68,7 @@ function sendMathToServer() {
         })
 }
 
-function getResultsFromServer () {
+function getResultsFromServer() {
     //console.log('in getResultsFromServer');
     $.ajax({
         type: 'GET',
@@ -71,7 +76,7 @@ function getResultsFromServer () {
 
     }).then(function(response){
         //console.log('retrieved');
-        console.log('display returned object', response);
+        //console.log('display returned object', response);
         $('#result-container').append(`
             <tr>
                 <td>${response.firstNumber}</td>
@@ -81,10 +86,46 @@ function getResultsFromServer () {
             </tr>
         `);
         $('input').val('');
+        
+        
         //console.log(response.firstNumber);
-    })
+        //resultHistory.push(response);
+        //console.log(resultHistory);
+        
+        //console.log(response);
+    });
 
 }
+//Key function that should make sense
+function calcHistory() {
+    //console.log('in calcHistory');
+    $.ajax({
+        type: 'GET',
+        url: '/history',
+
+
+    }).then(function(response){
+        console.log(response);
+        for (let result of response) {
+            $('#result-container').append(`
+            <tr>
+                <td>${result.firstNumber}</td>
+                <td>${result.operator}</td>
+                <td>${result.secondNumber}</td>
+                <td>${result.result}</td>
+            </tr>
+        `);
+        }
+        
+        
+
+    });
+}
+
+
+
+
+
 
 
 

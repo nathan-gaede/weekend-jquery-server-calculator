@@ -111,6 +111,13 @@ Append to the DOM
 - [x] Within getResultsFromServer, append <td> to the DOM using the properties of variable `response`
 - [x] Add command to clear input fields upon clicking the equals button
 
+Get route for calcuation history
+- [] Create 'GET' route with url '/history'
+- [] Test 'GET' route
+- [] Push object history into array
+- [] On page load, keep history displayed, even after browser refresh
+- [] 
+
 
 
 
